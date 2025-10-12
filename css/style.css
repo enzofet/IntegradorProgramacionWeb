@@ -1,0 +1,34 @@
+body {
+    background-color: #A8A39C;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    padding-top: 10%;
+    position: fixed;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 20%);
+    width: 5%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #385D8D;
+    transition: width 0.5s ease-out;
+}
+
+.nav-container:hover {
+    width: 20%;  
+
+}
+
+.nav-container div {
+    width: 30%;
+    height: 100px;
+}
+
+.boton-inicio::before{
+
+
+}
