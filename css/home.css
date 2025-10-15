@@ -1,20 +1,20 @@
 .descripcion-container {
-    margin-left: 15%;
+    margin-top: 13vh;
+    margin-left: 13vh;
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
     padding-top: 15px;
     padding-left: 20px;
     width: 80%;
-    
+
 
 }
 
 .tarjetas-container {
     display:grid;
     grid-template-columns: repeat(4, 25%);
-    
 }
 
-.tarjetas-container p{
+.tarjetas-container div{
     border-radius: 5px;
     border: 1px solid #800036;
     margin: 0 10px;
@@ -40,11 +40,12 @@
     margin-left: 15%;
 }
 
-.fondo-container img {
-    z-index: -100;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 105%;
-    height: 100%;
+.carrousel-container {
+    display: flex;
+    padding: 2rem;
+}
+
+.carrousel-container img {
+    width: 30%;
+    height: 20%;
 }
