@@ -42,7 +42,7 @@ body {
     color: white;
     text-decoration: none;
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
+    font-size: 1rem;
     padding: 5px 0;
     
 }
@@ -102,12 +102,43 @@ body {
 .descripcion-container {
     margin-left: 15%;
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    padding-left: 20px;
+    width: 80%;
+    
+
+}
+
+.tarjetas-container {
+    display:grid;
+    grid-template-columns: repeat(4, 25%);
+    
+}
+
+.tarjetas-container p{
+    border-radius: 5px;
+    border: 1px solid #800036;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: #F8F7F7;
 }
 
 .content-container h1{
     margin: 0;
     padding: 0;
+    font-size: 2rem;
+    color: #800036;
+}
+.content-container h2 {
+    font-size: 1rem;
     
+}
+
+.content-container p {
+    font-size: 0.8rem;
+}
+.carrousel-container {
+    margin-left: 15%;
 }
 
 .fondo-container img {
@@ -115,6 +146,6 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 80%;
-    height: 80%;
+    width: 105%;
+    height: 100%;
 }
