@@ -29,7 +29,8 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.nav-links {
+.nav-links a:hover {
+    background-color: #c86f80;
     display: flex;
 }
 
@@ -71,6 +72,7 @@ body {
 
 
 .logo-container img {
+    padding-left: 20%;
     width: 60%;
     height: 60%;
     object-fit: contain;
@@ -80,7 +82,7 @@ body {
 
 .boton-inicio::before{
     content: "";
-    background-image: url("/img/icon-home.png");
+    background-image: url("../img/icon-home.png");
     display: inline-block;
     background-repeat: no-repeat;
     width: 30px;
@@ -91,7 +93,7 @@ body {
 
 .boton-cursos::before {
     content: "";
-    background-image: url("/img/icon-cursos.png");
+    background-image: url("../img/icon-cursos.png");
     display: inline-block;
     background-repeat: no-repeat;
     width: 30px;
@@ -102,7 +104,7 @@ body {
 
 .boton-contactanos::before {
     content: "";
-    background-image: url("/img/icon-contactanos.png");
+    background-image: url("../img/icon-contactanos.png");
     display: inline-block;
     background-repeat: no-repeat;
     width: 30px;
