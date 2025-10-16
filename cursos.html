@@ -80,33 +80,6 @@
 
 
 
-  <script>
-
-
-
-    const imagenes = [
-        "./img/curso1.jpg",
-        "./img/curso2.jpg",
-        "./img/curso3.jpg",
-        "./img/curso4.jpg"
-    ];
-
-    let indice = 0;
-    const img = document.getElementById("carrousel-img");
-    const btnPrev = document.getElementById("prev");
-    const btnNext = document.getElementById("next");
-
-    btnNext.addEventListener("click", () => {
-        indice = (indice + 1) % imagenes.length; // circular
-        img.src = imagenes[indice];
-    });
-
-    btnPrev.addEventListener("click", () => {
-        indice = (indice - 1 + imagenes.length) % imagenes.length; // circular
-        img.src = imagenes[indice];
-    });
-  </script>
-</html>
-
+  
 
     
