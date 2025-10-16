@@ -23,7 +23,7 @@ body {
     grid-row: 1;
     position: fixed;
     grid-template-rows: 13vh;
-    grid-template-columns: 200px auto 1fr;
+    grid-template-columns: 200px 1fr;
     width: 100%;
     background-color: rgb(128, 0, 54);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -42,9 +42,9 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 6rem;
-    padding: 0;
+    gap: 3rem;
+    padding-top: 2%;
+    padding-left: 10%;
     
 }
 
@@ -57,7 +57,6 @@ body {
     text-decoration: none;
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
     font-size: 1.15rem;
-    
 }
 
 
