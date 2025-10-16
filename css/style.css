@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 html, body {
-    
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -15,6 +13,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto;
     background-image: linear-gradient(#F3DEDB, #fdbfbf);
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .nav-container {
@@ -22,6 +21,7 @@ body {
     display: grid;
     grid-row: 1;
     position: fixed;
+    z-index: 100;
     grid-template-rows: 13vh;
     grid-template-columns: 200px auto 1fr;
     width: 100%;
@@ -54,7 +54,7 @@ body {
     align-items: center;
     color: white;
     text-decoration: none;
-    font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
+    
     font-size: 1.15rem;
     
 }
@@ -121,5 +121,5 @@ body {
 
 .logo-footer img{    
     width: 15%;
-
+    padding: 0 15px;
 }

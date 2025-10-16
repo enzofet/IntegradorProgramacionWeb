@@ -36,16 +36,69 @@
 .content-container p {
     font-size: 0.8rem;
 }
-.carrousel-container {
-    margin-left: 15%;
-}
 
 .carrousel-container {
     display: flex;
-    padding: 2rem;
+    width: 80%;
+    height: 25rem;
+    margin-top: 3rem;
+    margin-left: 15rem;
+    position: relative;
 }
 
-.carrousel-container img {
-    width: 30%;
-    height: 20%;
+.flecha-anterior {
+   left: -3rem;
+}
+
+.flecha-siguiente {
+    right: 16rem;
+}
+
+.flecha-anterior, .flecha-siguiente {
+    width: 5%;
+    height: 25rem;
+    opacity: 0.5;
+    position: absolute;
+}
+.carrousel-images {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carrousel-images img {
+    width: 40%;
+    height: 25rem;
+    border-radius: 1rem;
+    position: absolute;
+}
+
+#imagen-frente {
+    z-index: 0;
+    left: 0;
+    
+}
+
+#segunda-imagen {
+    z-index: -1;
+    left: 10vw;
+    
+}
+
+#tercera-imagen {
+    z-index: -2;
+    left: 15vw;
+}
+
+#cuarta-imagen {
+    z-index: -3;
+    left: 20vw;
+    
+}
+#quinta-imagen {
+    z-index: -4;
+    left: 25vw;
+   
 }
