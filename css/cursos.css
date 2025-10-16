@@ -1,0 +1,80 @@
+.carrousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 14vh; 
+    width: 100%;
+    height: 50vh;
+}
+
+.carrousel-container img {
+    background-color: #F8F7F7;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
+  
+}
+
+.carrousel-container img:hover{
+    background: radial-gradient(circle, #b44949, #ffffff);
+    
+}
+
+.carrousel-container button {
+    background-color: rgba(128, 0, 54, 0.8);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.8s;
+}
+    
+.carrousel-container button:hover {
+    background-color: rgb(128, 0, 54);
+}
+
+.cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.curso {
+    background: #F8F7F7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn-inscribirse {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: rgb(128, 0, 54, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Roboto Mono", monospace;
+    transition: background 0.8s;
+}
+
+.btn-inscribirse:hover {
+    background-color: rgb(128, 0, 54, 1);
+}
