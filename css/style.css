@@ -31,7 +31,7 @@ body {
 
 .nav-links a:hover {
     background-color: #c86f80;
-    display: flex;
+    border-radius: 0.5rem;
 }
 
 .nav-container div {
@@ -43,7 +43,6 @@ body {
     display: flex;
     flex-direction: row;
     gap: 3rem;
-    padding-top: 1.5%;
     padding-left: 10%;
     
 }
@@ -55,7 +54,7 @@ body {
     align-items: center;
     color: white;
     text-decoration: none;
-    
+    padding: 1rem;
     font-size: 1.15rem;
 }
 
