@@ -4,7 +4,7 @@
     margin-left: 13vh;
     font-family: 'Roboto Mono', Arial, Helvetica, sans-serif;
     font-family: 'Segoe UI', sans-serif;
-    width: 80%;
+    width: 88%;
     background-color: azure;
     border-radius: 0rem 0rem 3rem 3rem;
     
@@ -20,8 +20,8 @@
 
 .parrafo p{
     font-weight: 600;
-
 }
+
 .text-container h3{
     color: #800036;
 }
@@ -41,6 +41,7 @@
     font-size: 2rem;
     color: #800036;
 }
+
 .content-container h2 {
     font-size: 1rem;
     
@@ -52,19 +53,19 @@
 
 .carrousel-container {
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 25rem;
     margin-top: 3rem;
-    margin-left: 15rem;
     position: relative;
+    overflow-x: hidden;
 }
 
 .flecha-anterior {
-   left: -3rem;
+   left: 0;
 }
 
 .flecha-siguiente {
-    right: 16rem;
+    right: 0;
 }
 
 .flecha-anterior, .flecha-siguiente {
@@ -73,11 +74,13 @@
     opacity: 0.5;
     position: absolute;
 }
+
+
+
 .carrousel-images {
     display: flex;
     width: 100%;
     justify-content: center;
-    align-items: center;
     
 }
 
@@ -85,31 +88,63 @@
     width: 40%;
     height: 25rem;
     border-radius: 1rem;
-    position: absolute;
+    
 }
 
 #imagen-frente {
     z-index: 0;
-    left: 0;
     
 }
 
-#segunda-imagen {
-    z-index: -1;
-    left: 10vw;   
-}
 
-#tercera-imagen {
-    z-index: -2;
-    left: 15vw;
-}
 
-#cuarta-imagen {
-    z-index: -3;
-    left: 20vw;
+
+.formulario {
+    width: 97%;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
-#quinta-imagen {
-    z-index: -4;
-    left: 25vw;
+
+.form-contacto {
+    padding: 2rem 2rem;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 10% 50% 10%;
+    gap: 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    background-color: #E3DEE2;
 }
+
+
+.form-contacto input, textarea {
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+
+.mensaje-contacto {
+    padding-top: 1rem;
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.mensaje-contacto textarea {
+    width: 100%;
+    height: 100%;
+}
+
+.enviar-contacto {
+    grid-column: 1 / span 2;
+    grid-row: 4 / 4;  
+    margin-bottom: 4rem; 
+    font-weight: 600;
+}
+
