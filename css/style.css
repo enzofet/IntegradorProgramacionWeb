@@ -62,16 +62,14 @@ body {
 .logo-container {
     display: flex;
     width: 100%;
-    height: 100%;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 
-
 .logo-container img {
     padding-left: 20%;
-    width: 60%;
+    width: 100%;
     height: 60%;
     object-fit: contain;
     margin-top: 8%;
@@ -117,9 +115,26 @@ body {
     background-color: #545454;
     grid-row: 3;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .logo-footer img{    
-    width: 15%;
+    width: 40%;
     padding: 0 15px;
+}
+
+.footer-container div{
+    display: flex;
+}
+
+.redes-sociales {
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.redes-sociales img {
+    width: 1.5rem;
 }
