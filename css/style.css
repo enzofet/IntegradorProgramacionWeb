@@ -127,6 +127,7 @@ body {
 
 .footer-container div{
     display: flex;
+    
 }
 
 .redes-sociales {
@@ -138,3 +139,30 @@ body {
 .redes-sociales img {
     width: 1.5rem;
 }
+
+.informacion-container {
+    justify-content: center;
+}
+
+.informacion-container ul {
+    list-style: none;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: white;
+}
+
+.informacion-container ul li> a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+
+.informacion-container ul li> a:hover {
+    cursor: pointer;
+    color: rgb(128, 0, 54);
+}
+
+
