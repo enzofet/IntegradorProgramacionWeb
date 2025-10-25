@@ -1,0 +1,31 @@
+.form-container {
+    margin-top: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.formulario {
+    width: 40%;
+    background-color: bisque;
+    padding: 3rem;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 1rem;
+}
+
+.formulario input{
+    height: 2rem;
+    border-radius: 0.5rem;
+    border-style: none;
+}
+
+.formulario label {
+    font-weight: 600;
+}
+
+.formulario select {
+    height: 2rem;
+}
