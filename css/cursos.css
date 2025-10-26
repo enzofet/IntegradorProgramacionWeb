@@ -1,20 +1,21 @@
 /*carrrrousel*/
-.main-cursos div{
+.contenedor {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .carrousel-container{
-    background-color: rgb(255, 255, 255);
-    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 130px;
     position:relative;
     width: 900px;
     height: auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border-radius: 10px;
-    gap: 8px;
+    gap: 1rem;
 
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
@@ -30,36 +31,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.5s ease;
     
 }
 
 .carrousel-imagen{
     position: relative;
-    background-color: white;
+    background-color: rgb(175, 43, 43);
     min-width: 100%;
-    transform: translateX(100%);
+    height: 600px;
+    transform: translateX(0%);
     
 }
 
 .imagen{
-    min-width: 100%;
-    height: 650px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 
 .carrousel-boton{
-    background-color: rgb(128, 0, 54, 0.8);
+    background-color: rgba(128, 0, 54, 0.8);
     color: white;
+    font-size: 50px;
+    width: 50px;
+    height: 250px;
     border: 30px rgb(128, 0, 54);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border-radius: 8px;
-    transition: background 0.8s;
+    transition: background 0.5s;
 }
 
+
 .carrousel-boton:hover {
-    background-color: rgb(247, 229, 236);
+    background-color: rgba(128, 0, 54, 1);
 }
+
+.puntos{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.punto{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 20px;
+    height: 20px;
+    border: 10px ;
+    border-radius: 50%;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    
+}
+
 
 
 
