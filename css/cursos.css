@@ -85,8 +85,7 @@
 
 .cursos-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: 2rem;
     padding: 2rem;
 }

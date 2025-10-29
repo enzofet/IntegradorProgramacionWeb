@@ -1,10 +1,10 @@
 const imagenes = [
-  "../img/carrousel/flayer2x1.jpg",
-  "../img/carrousel/flayer30italiano.jpg",
-  "../img/carrousel/Flayer50italiano.jpg",
-  "../img/carrousel/flayer2x1.jpg",
-  "../img/carrousel/flayer30italiano.jpg",
-  "../img/carrousel/Flayer50italiano.jpg"
+  "../img/carrousel/alemania.jpg",
+  "../img/carrousel/brasil.jpg",
+  "../img/carrousel/francia.jpg",
+  "../img/carrousel/inglaterra.jpg",
+  "../img/carrousel/italia.jpg",
+  "../img/carrousel/japon.jpg"
 ];
 
 const carrousel = document.querySelector(".carrousel");
