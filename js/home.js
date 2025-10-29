@@ -14,30 +14,20 @@ flechaPrev.addEventListener("click", retrocederImagen);
 let contador = 0;
 
 function retrocederImagen() {
-  
+  const lastImage = containerCarrousel.lastElementChild;
+  containerCarrousel.firstElementChild.classList.remove("imagen-frente");
+  containerCarrousel.insertBefore(lastImage, containerCarrousel.firstElementChild);
+  containerCarrousel.firstElementChild.classList.add("imagen-frente");
 }
 
 function avanzarImagen() {
-    const firstImagen = containerCarrousel.firstElementChild;
+    const firstImage = containerCarrousel.firstElementChild;
     containerCarrousel.firstElementChild.classList.remove("imagen-frente");
-    containerCarrousel.removeChild(firstImagen);
-    containerCarrousel.appendChild(firstImagen);
+    containerCarrousel.removeChild(firstImage);
+    containerCarrousel.appendChild(firstImage);
     containerCarrousel.firstElementChild.classList.add("imagen-frente");
 }
 
-/*function avanzarImagen() {
-  if(contador != imagesCarrousel.length -1){
-    const firstImagen = containerCarrousel.firstElementChild;
-    imagesCarrousel[contador].classList.remove("imagen-frente");
-    containerCarrousel.removeChild(firstImagen);
-    containerCarrousel.appendChild(firstImagen);
-    contador++;
-    imagesCarrousel[contador].classList.add("imagen-frente");
-  } else {
-    contador = 0;
-    moverElemento();
-  }
-}*/
 
 
 
