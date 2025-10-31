@@ -7,6 +7,16 @@ const imagenes = [
   "../img/carrousel/japon.jpg"
 ];
 
+
+const enlaces = [
+    "#alemania",
+    "#brasil",
+    "#francia",
+    "#inglaterra",
+    "#italia",
+    "#japon"
+];
+
 const carrousel = document.querySelector(".carrousel");
 const btnIzq = document.getElementById("izquierdo");
 const btnDer = document.getElementById("derecho");
@@ -27,7 +37,12 @@ function mostrarImagenes(){
         img.src = imagenes[indiceImagen];
         img.alt = "imagen " + (indiceImagen + 1);
 
-        div.appendChild(img);
+        
+        const a = document.createElement("a");
+        a.href = enlaces[indiceImagen] || "#";
+        a.appendChild(img);
+
+        div.appendChild(a);
         carrousel.appendChild(div);
     }
 }
