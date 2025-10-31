@@ -113,16 +113,14 @@
     cursor: pointer;
 }
 
-.images {
-    display: flex;
-    visibility: visible;
-}
+
 
 .imagen .imagen-frente{
     z-index: 2;
     width: 40vw;
     height: 30rem;
     position: relative;
+    
 }
 
 
