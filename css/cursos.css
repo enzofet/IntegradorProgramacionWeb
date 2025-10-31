@@ -1,13 +1,15 @@
-/*carrousel*/
+/*Contenedor de carrousel y cursos*/
 .contenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
+/*carrousel*/
 .carrousel-container{
-    background-color: #ffffff66;
+    background-color: rgba(255, 255, 255, 0.4);
     margin-top: 130px;
     position:relative;
     width: 1650px;
@@ -38,7 +40,7 @@
 }
 
 .carrousel-imagen{
-    background-color: #322c2e;
+    background-color: rgb(50, 44, 46);
     flex: 0 0 calc((100% - 2 * 1.5rem) / 3);
     height: 650px;
     border-radius: 10px;
@@ -89,50 +91,100 @@
 
 
 
+/*separadores*/
+.separador {
+    margin: 2rem 0;
+}
 
+.separador-interno{  
+    margin: 1rem 0;
+    width: 100%;
+}
+.hr1{
+    border-top: 1px solid rgba(0,0,0,0.5);
+    border-bottom: none;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 50px; 
+}
+
+.hr{
+    border-top: 1px solid rgba(0,0,0,0.5);
+    border-bottom: none;
+    height: 2px;
+    width: 1600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 50px;
+}
 
 /*curso*/
 
-.cursos-container {
+.cursos{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 1200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    justify-content:flex-start;
+    
+    
 }
 
-.curso {
-    background: #F8F7F7;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    width: calc(33.333% - 2rem);
-    text-align: center;
-    padding: 1rem;
-    box-sizing: border-box;
+.descripcion-curso{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    gap: 1rem;
+
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.curso img {
-    width: 100%;
-    height: 180px;
+.curso-contenido{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 550px;
+
+    font-family:'Segoe UI', sans-serif;
+    font-size: 18px;
+
+}
+
+.curso-imagen img{
+    width: 550px;
+    height: 300px;
+    margin-top: 20px;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-.btn-inscribirse {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: rgb(128, 0, 54, 0.8);
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 8px;
-    font-family: "Roboto Mono", monospace;
-    transition: background 0.8s;
+.condiciones-curso{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+
+    font-family:'Segoe UI', sans-serif;
+    font-size: 18px;
 }
 
-.btn-inscribirse:hover {
-    background-color: rgb(128, 0, 54, 1);
+.titulo-inscripcion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
 }
+
+.h1-cursos {
+    font-family: 'Libre Baskerville','Segoe UI', sans-serif;
+    color: rgb(128, 0, 54);
+
+    scroll-margin-top: 24vh;
+}
+
+
 
