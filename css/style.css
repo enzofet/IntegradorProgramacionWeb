@@ -12,7 +12,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr auto;
-    background-image: linear-gradient(#F3DEDB, #fdbfbf);
+    background-color: rgb(247, 212, 218);
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -157,6 +157,8 @@ body {
     cursor: pointer;
     color: black;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 
