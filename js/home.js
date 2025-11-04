@@ -37,11 +37,24 @@ function validarForm() {
   let telefono = formContacto["ftelefono"].value;
   let mensaje = formContacto["fmensaje"].value;
 
-  if(nombre == "" || email == "" || asunto == "" || telefono == "" || mensaje == ""){
+  if(nombre == ""){
     return false;
   } 
 
-  
+  if(email == ""){
 
+  }
+
+  if(asunto == ""){
+
+  }
+
+  if(isNaN(telefono) || telefono == ""){
+
+  }
+
+  if(mensaje == ""){
+
+  }
 }
 
