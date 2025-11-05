@@ -8,7 +8,6 @@
 
 .formulario {
     width: 40%;
-    background-color: bisque;
     padding: 3rem;
     border-radius: 2rem;
     display: grid;
@@ -28,4 +27,33 @@
 
 .formulario select {
     height: 2rem;
+}
+
+.boton-inscripcion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.btn-inscribirse{
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+    color: white;
+    font-size: 27px;   
+
+    background-color: rgba(128, 0, 54, 0.8);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    
+    border-width: 3px;
+    border-color:  #800036;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    
+    transition: background 0.5s;
+}
+.btn-inscribirse:hover {
+    background-color: rgba(128, 0, 54, 1);
 }
