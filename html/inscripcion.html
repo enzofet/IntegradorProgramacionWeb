@@ -30,30 +30,42 @@
 
       <div class="form-container">
         <form action="#" class="formulario">
-          <label for="nombre">Nombre/s</label>
-            <input type="text" name="nombre"/>
-          <label for="apellido">Apellido/s</label>
+          <label for="nombre">Nombre/s:</label>
+            <input type="text" id="nombre" name="nombre"/>
+          <label for="apellido">Apellido/s:</label>
             <input type="text" id="apellido" name="apellido"/>
-          <label for="telefono">Telefono</label>
+          <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email"/>
+          <label for="telefono">Telefono:</label>
             <input type="text" id="telefono" name="telefono"/>
-          <label for="DNI">DNI</label>
+          <label for="DNI">DNI:</label>
             <input type="text" id="DNI" name="DNI"/>
-          <label for="cursos">Cursos disponibles</label>
+          <label for="cursos">Cursos disponibles:</label>
             <select name="cursos" id="cursos">
-
+                <option>...</option>
+                <option>Alemán</option>
+                <option>Inglés</option>
+                <option>Portugués</option>
+                <option>Francés</option>
+                <option>Italiano</option>
+                <option>Japonés</option>
             </select>
-          <label for="fechanacimiento">Fecha de nacimiento</label>
+          <label for="fechanacimiento">Fecha de nacimiento:</label>
             <input type="date" id="fechanacimiento" name="fechanacimiento"/>
-          <label for="genero">Genero</label>
+          <label for="genero">Género:</label>
             <select name="genero" id="genero">
                 <option>...</option>
                 <option>Femenino</option>
                 <option>Masculino</option>
                 <option>Otro</option>
             </select>
+    <div class="boton-inscripcion">
+      <button type="submit" class="btn-inscribirse" id="inscribirse">Inscribirse</button>
+    </div>
         </form>
       </div>
-    </nav>
+
+
     <!--Estas etiquetas son para todas las paginas-->
     <footer class="footer-container">
       <div class="logo-footer">
@@ -74,5 +86,8 @@
         </ul>
       </div>
     </footer>
+
+    <!--Java Script-->
+    <script src="../js/inscripcion.js"></script>
   </body>
 </html>
