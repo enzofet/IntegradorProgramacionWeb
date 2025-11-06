@@ -49,6 +49,9 @@ function validarForm(evento) {
     validado = false;
   }
 
+  if(validado){
+    formContacto.reset();
+  }
   
   }
   
