@@ -27,34 +27,5 @@ function avanzarImagen() {
   containerCarrousel.firstElementChild.classList.add("imagen-frente");
 }
 
-let formContacto = document.forms["form-contacto"];
-formContacto.addEventListener("submit", validarForm);
 
-function validarForm() {
-  let nombre = formContacto["fnombre"].value;
-  let email = formContacto["femail"].value;
-  let asunto = formContacto["fasunto"].value;
-  let telefono = formContacto["ftelefono"].value;
-  let mensaje = formContacto["fmensaje"].value;
-
-  if(nombre == ""){
-    return false;
-  } 
-
-  if(email == ""){
-
-  }
-
-  if(asunto == ""){
-
-  }
-
-  if(isNaN(telefono) || telefono == ""){
-
-  }
-
-  if(mensaje == ""){
-
-  }
-}
 

@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10% 10% 50% 10%;
-    gap: 1.5rem;
+    gap: 2rem;
     border-radius: 1.5rem;
     font-weight: 600;
     background-color: #E3DEE2;
@@ -36,6 +36,7 @@
     height: 2rem;
     border-radius: 0.5rem;
     border-style: none;
+    
 }
 
 .mensaje-contacto {
@@ -53,7 +54,7 @@
 .enviar-contacto {
     grid-column: 1 / span 2;
     grid-row: 4 / 4;  
-    margin-bottom: 4rem; 
+    margin-bottom: 5rem; 
     font-weight: 600;
 }
 
@@ -64,4 +65,8 @@
 
 .form-contacto div input:focus, textarea:focus{
     outline: 0.1rem solid rgb(76, 170, 214) ;
+}
+
+.form-contacto .input-error {
+    border: 1px solid red;
 }
