@@ -70,3 +70,12 @@
 .form-contacto .input-error {
     border: 1px solid red;
 }
+
+.mensaje-exito {
+    display: none;
+    text-align: center;
+    color: green;
+    background-color: #E3DEE2;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}

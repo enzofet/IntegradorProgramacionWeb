@@ -4,6 +4,7 @@ const email = document.getElementById("femail");
 const asunto = document.getElementById("fasunto");
 const telefono = document.getElementById("ftelefono");
 const mensaje = document.getElementById("fmensaje");
+const mensajeExito = document.getElementById("mensaje-exito");
 formContacto.addEventListener("submit", validarForm);
 
 function validarForm(evento) {
@@ -50,6 +51,8 @@ function validarForm(evento) {
   }
 
   if(validado){
+    formContacto.style.display = "none";
+    mensajeExito.style.display = "block";
     formContacto.reset();
   }
   
