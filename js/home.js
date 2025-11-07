@@ -3,6 +3,7 @@ const containerCarrousel = document.querySelector("#imagenes");
 
 containerCarrousel.classList.add("imagen-frente");
 containerCarrousel.firstElementChild.classList.add("imagen-frente");
+
 const flechaPrev = document.getElementsByClassName("flecha-anterior")[0];
 const flechaNext = document.getElementsByClassName("flecha-siguiente")[0];
 

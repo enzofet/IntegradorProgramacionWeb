@@ -1,10 +1,11 @@
-const formContacto = document.querySelector("form");
+const formContacto = document.querySelector(".form-contacto");
+const formaContainer = document.querySelector(".formulario")
 const nombre = document.getElementById("fnombre");
 const email = document.getElementById("femail");
 const asunto = document.getElementById("fasunto");
 const telefono = document.getElementById("ftelefono");
 const mensaje = document.getElementById("fmensaje");
-const mensajeExito = document.getElementById("mensaje-exito");
+
 formContacto.addEventListener("submit", validarForm);
 
 function validarForm(evento) {
@@ -46,13 +47,22 @@ function validarForm(evento) {
     mostrarError(mensaje, "Campo vacio o no valido.");
     validado = false;
   } else if(mensaje.value.length < 20 || mensaje.value.length > 500){
-    mostrarError(mensaje, "Ingrese una consulta entre 10 a 500 caracteres.");
+    mostrarError(mensaje, "Ingrese una consulta entre 20 a 500 caracteres.");
     validado = false;
   }
 
   if(validado){
-    formContacto.style.display = "none";
-    mensajeExito.style.display = "block";
+    const contenedorMsjExito = document.createElement("div");
+    const tituloMsj = document.createElement("h2");
+    const msj = document.createElement("p");
+    
+    tituloMsj.textContent = "Consulta enviada exitosamente.";
+    msj.textContent = "Trataremos de ponernos en contacto contigo lo más pronto posible " + nombre.value + ". recibiras una respuesta al correo " + email.value;
+    contenedorMsjExito.appendChild(tituloMsj);
+    contenedorMsjExito.appendChild(msj);
+    contenedorMsjExito.classList.add("mensaje-exito");
+    
+    formaContainer.replaceChild(contenedorMsjExito, formContacto);
     formContacto.reset();
   }
   

@@ -72,7 +72,6 @@
 }
 
 .mensaje-exito {
-    display: none;
     text-align: center;
     color: green;
     background-color: #E3DEE2;
