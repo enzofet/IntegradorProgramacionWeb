@@ -2,7 +2,9 @@
     margin-top: 20vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -61,4 +63,9 @@
 }
 .btn-inscribirse:hover {
     background-color: rgba(128, 0, 54, 1);
+}
+
+#mensajes {
+    margin-top: 1rem;
+    font-family: "Segoe UI", sans-serif;
 }

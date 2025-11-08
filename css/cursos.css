@@ -1,4 +1,3 @@
-/*Contenedor de carrousel y cursos*/
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -7,172 +6,153 @@
     position: relative;
 }
 
-/*carrousel*/
-.carrousel-container{
+.carrousel-container {
     background-color: rgba(255, 255, 255, 0.5);
-    margin-top: 130px;
-    position:relative;
-    width: 1650px;
+    margin-top: 8rem; 
+    position: relative;
+    width: 90%;
+    max-width: 103rem;
     height: auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-radius: 10px;
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
+    border-radius: 0.6rem;
     gap: 1.5rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.carrousel{
+.carrousel {
     width: 100%;
-    max-width: 1450px;
-    border-radius: 10px;
+    max-width: 90rem; 
+    border-radius: 0.6rem;
     overflow: hidden;
-    margin: 20px 0px;
+    margin: 1.25rem 0;
     gap: 1.5rem;
     transition: transform 0.5s ease;
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 0.75rem; 
+    padding: 0 0.75rem;
 }
 
-.carrousel-imagen{
+.carrousel-imagen {
     background-color: rgb(50, 44, 46);
     flex: 0 0 calc((100% - 2 * 1.5rem) / 3);
-    height: 650px;
-    border-radius: 10px;
+    height: 70vh;
+    border-radius: 0.6rem;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem; 
+    padding: 0.5rem;
     box-sizing: border-box;
 }
 
-.imagen{
+.imagen {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     display: block;
 }
 
-.imagen:hover{
+.imagen:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
 
-.carrousel-boton{
+.carrousel-boton {
     background-color: rgba(128, 0, 54, 0.8);
     color: white;
-    font-size: 50px;
-    width: 50px;
-    height: 250px;
-    border-width: 3px;
-    border-color:  #800036;
+    font-size: 3rem;
+    width: 3rem; 
+    height: 30vh; 
+    border-width: 0.2rem;
+    border-color: #800036;
     border-style: solid;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-radius: 8px;
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background 0.5s;
 }
-
 
 .carrousel-boton:hover {
     background-color: rgba(128, 0, 54, 1);
 }
 
-
-
-
-/*separadores*/
 .separador {
     margin: 2rem 0;
 }
 
-.separador-interno{  
+.separador-interno {
     margin: 1rem 0;
     width: 100%;
 }
-.hr1{
+
+.hr1 {
     border-top: 1px solid rgba(0,0,0,0.5);
     border-bottom: none;
-    height: 2px;
+    height: 0.125rem;
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-radius: 50px; 
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
+    border-radius: 3rem;
 }
 
-.hr{
+.hr {
     border-top: 1px solid rgba(0,0,0,0.5);
     border-bottom: none;
-    height: 2px;
-    width: 1600px;
+    height: 0.125rem;
+    width: 95%;
+    max-width: 100rem; 
     margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-radius: 50px;
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
+    border-radius: 3rem;
 }
 
-/*curso*/
-
-.cursos{
+.cursos {
     background-color: rgba(255, 255, 255, 0.4);
-    width: 1200px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    
+    width: 75%;
+    max-width: 75rem; 
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    
-    
+    justify-content: flex-start;
 }
 
-.descripcion-curso{
-    margin-bottom: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
-
+.descripcion-curso {
+    margin: 0 2.5rem 1.25rem 2.5rem; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.info-cursos{
-    margin-bottom: 20px;
-    margin-right: 80px;
-    margin-left: 40px;
-
+.info-cursos {
+    margin: 0 5rem 1.25rem 2.5rem; 
     font-family: 'Libre Baskerville','Segoe UI', sans-serif, monospace;
-    font-size: 18px;
-
-
+    font-size: 1.125rem; 
 }
 
-.curso-contenido{
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 550px;
-
+.curso-contenido {
+    margin-top: 0;
+    margin-left: 0;
+    width: 34rem;
     font-family: 'Libre Baskerville','Segoe UI', sans-serif, monospace;
-    font-size: 18px;
-
+    font-size: 1.125rem;
 }
 
-.curso-imagen img{
-    width: 550px;
-    height: 300px;
-    margin-top: 20px;
+.curso-imagen img {
+    width: 34rem;
+    height: 18.75rem;
+    margin-top: 1.25rem; 
     object-fit: cover;
 }
 
-.boton-curso{
+.boton-curso {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -180,73 +160,68 @@
     margin-bottom: 0.8rem;
 }
 
-.btn-inscribirse{
+.btn-inscribirse {
     font-family: "Roboto Mono", monospace;
     text-decoration: none;
     color: white;
-    font-size: 27px;   
-
+    font-size: 1.7rem; 
     background-color: rgba(128, 0, 54, 0.8);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    
-    border-width: 3px;
-    border-color:  #800036;
+    box-shadow: 0 0.25rem 0.6rem rgba(0,0,0,0.6);
+    border-width: 0.2rem;
+    border-color: #800036;
     border-style: solid;
-    border-radius: 10px;
-    padding: 5px 10px;
-    
+    border-radius: 0.6rem;
+    padding: 0.3rem 0.6rem;
     transition: background 0.5s;
 }
+
 .btn-inscribirse:hover {
     background-color: rgba(128, 0, 54, 1);
 }
 
-.condiciones-curso{
-    margin-top: 0px;
-    margin-left: 0px;
+.condiciones-curso {
+    margin-top: 0;
+    margin-left: 0;
     width: 100%;
 }
 
-.condiciones-curso a{
+.condiciones-curso a {
     text-decoration: none;
     color: rgb(76, 79, 211);
     font-family: 'Segoe UI', sans-serif, monospace;
     font-weight: bold;
     font-style: italic;
-    font-size: 20px;
+    font-size: 1.25rem; 
 }
 
-.condiciones-curso a:hover{
+.condiciones-curso a:hover {
     text-decoration: underline;
     color: rgb(128, 0, 54);
 }
 
-.titulo-inscripcion{
+.titulo-inscripcion {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 40px;
+    margin: 0 2.5rem;
 }
 
 .h1-cursos {
     font-family: 'Libre Baskerville','Segoe UI', sans-serif, monospace;
     color: rgb(128, 0, 54);
-    
     scroll-margin-top: 24vh;
-    font-size: 40px;
+    font-size: 2.5rem; 
 }
 
-.h2-curso{
+.h2-curso {
     font-family: 'Libre Baskerville','Segoe UI', sans-serif, monospace;
     color: rgb(43, 39, 40);
-    font-size: 30px;
+    font-size: 1.9rem; 
     scroll-margin-top: 24vh;
 }
 
 .ul-cursos {
-    list-style-image: url('../img/carrousel/ulhtml.png')  ;
-    margin-left: 20px;
-    padding-left: 20px;
+    list-style-image: url('../img/carrousel/ulhtml.png');
+    margin-left: 1.25rem;
+    padding-left: 1.25rem;
 }
-
-
