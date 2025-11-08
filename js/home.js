@@ -1,4 +1,8 @@
-const imagesCarrousel = document.querySelectorAll(".imagen");
+
+
+
+//Tuve que cambiarlo a ultimo momento porque vi en el ejercicio que era con un Array. Fet Enzo
+/*const imagesCarrousel = document.querySelectorAll(".imagen");
 const containerCarrousel = document.querySelector("#imagenes");
 
 containerCarrousel.classList.add("imagen-frente");
@@ -26,7 +30,7 @@ function avanzarImagen() {
   containerCarrousel.removeChild(firstImage);
   containerCarrousel.appendChild(firstImage);
   containerCarrousel.firstElementChild.classList.add("imagen-frente");
-}
+}*/
 
 
 

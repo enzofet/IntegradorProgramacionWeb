@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cursos.css">
     <link rel="stylesheet" href="./css/home.css" />
   </head>
 
@@ -77,43 +78,15 @@
           </div>
         </div>
       </div>
-      <div class="carrousel-container">
-        
-        <div id="imagenes" class="carrousel-images">
-            <img
-            class="imagen"
-            src="./img/carrousel/inglaterra.jpg"
-            alt="ingles"
-          />
-            <img
-            class="imagen"
-            src="./img/carrousel/alemania.jpg"
-            alt="aleman"
-          />
-            <img
-            class="imagen"
-            src="./img/carrousel/brasil.jpg"
-            alt="portugues"
-          />
-            <img
-            class="imagen"
-            src="./img/carrousel/francia.jpg"
-            alt="frances"
-          />
-            <img class="imagen" 
-            src="./img/carrousel/japon.jpg" 
-            alt="japones" />
-            <img
-            class="imagen"
-            src="./img/carrousel/italia.jpg"
-            alt="italiano"
-          />
-          
+
+      
+      <div class="contenedor">
+          <div class="carrousel-container">
+            <button class="carrousel-boton" id="izquierdo">&#10094;</button>
+            <div class="carrousel"></div>
+            <button class="carrousel-boton" id="derecho">&#10095;</button>  
+          </div>
         </div>
-        <button class="flecha-anterior">&lt</button>
-        <button class="flecha-siguiente">&gt</button>
-      </div>
-    </div>
 
     
 
@@ -143,6 +116,6 @@
         </ul>
       </div>
     </footer>
-    <script src="./js/home.js"></script>
+    <script src="./js/cursos.js"></script>
   </body>
 </html>
