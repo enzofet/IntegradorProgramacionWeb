@@ -10,12 +10,12 @@ const imagenes = [
 
 
 const enlaces = [
-    "../html/cursos.html",
-    "../html/cursos.html",
-    "../html/cursos.html",
-    "../html/cursos.html",
-    "../html/cursos.html",
-    "../html/cursos.html"
+    "./html/cursos.html",
+    "./html/cursos.html",
+    "./html/cursos.html",
+    "./html/cursos.html",
+    "./html/cursos.html",
+    "./html/cursos.html"
 ];
 
 const carrousel = document.querySelector(".carrousel");
