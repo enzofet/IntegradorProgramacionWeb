@@ -1,114 +1,147 @@
-const nombre = document.getElementById('nombre');
-const apellido = document.getElementById('apellido');
-const email = document.getElementById('email');
-const telefono = document.getElementById('telefono');
-const dni = document.getElementById('DNI');
-const cursos = document.getElementById('cursos');
-const fechaNacimiento = document.getElementById('fechanacimiento');
-const genero = document.getElementById('genero');
-const btnInscribirse = document.getElementById('inscribirse');
-const mensajesDiv = document.getElementById('mensajes');
+const formiInscripcion = document.querySelector(".form-inscripcion");
+const formaContainer = document.querySelector(".formulario");
+
+const nombre = document.getElementById('fnombre');
+const apellido = document.getElementById('fapellido');
+const email = document.getElementById('femail');
+const telefono = document.getElementById('ftelefono');
+const dni = document.getElementById('fDNI');
+const cursos = document.getElementById('fcursos');
+const fechaNacimiento = document.getElementById('ffechanacimiento');
+const genero = document.getElementById('fgenero');
+
+const btnInscribirse = document.querySelector(".enviar-formulario");
+
+const hoy = new Date();
+const añoMax = hoy.getFullYear() - 12;
+const mes = String(hoy.getMonth() + 1).padStart(2, '0');
+const dia = String(hoy.getDate()).padStart(2, '0');
+
+const fechaMax = `${añoMax}-${mes}-${dia}`;
+
+fechaNacimiento.min = '1900-01-01';
+fechaNacimiento.max = fechaMax;
+
+formiInscripcion.addEventListener('submit', validarFormulario);
 
 function validarFormulario(event) {
   event.preventDefault();
-  mensajesDiv.innerHTML = "";
+  limpiarErrores();
+
+  let validado = true;
 
   const patronTelefono = /^\d{7,15}$/;
   const patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const patronDNI = /^\d{7,8}$/; 
+  const patronDNI = /^\d{7,8}$/;
 
-  const errores = [];
-
- 
-  const mensaje = document.createElement('div');
-  mensaje.id = 'mensaje';
-  mensaje.style.margin = "1rem auto";
-  mensaje.style.width = "70%";
-  mensaje.style.padding = "1rem";
-  mensaje.style.borderRadius = "0.5rem";
-  mensaje.style.textAlign = "center";
-  mensaje.style.fontWeight = "bold";
-  mensaje.style.boxShadow = "0 4px 10px rgba(0,0,0,0.3)";
-
-  const todosVacios = 
-    nombre.value.trim() === '' &&
-    apellido.value.trim() === '' &&
-    email.value.trim() === '' &&
-    telefono.value.trim() === '' &&
-    dni.value.trim() === '' &&
-    cursos.value === '...' &&
-    fechaNacimiento.value === '' &&
-    genero.value === '...';
-
-  if (todosVacios) {
-    mensaje.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-    mensaje.style.color = "#800036";
-    mensaje.innerHTML = "Por favor, complete todos los campos antes de continuar.";
-    mensajesDiv.appendChild(mensaje);
-    return;
+  if (nombre.value.trim() === '') {
+    mostrarError(nombre, 'Por favor ingrese un nombre válido.');
+    validado = false;
   }
 
-  if (nombre.value.trim() === '' || apellido.value.trim() === '' || email.value.trim() === '' ||
-      telefono.value.trim() === '' || dni.value.trim() === '' || cursos.value === '...' ||
-      fechaNacimiento.value === '' || genero.value === '...') {
-
-    errores.push('Faltan campos por completar.');
+  if (apellido.value.trim() === '') {
+    mostrarError(apellido, 'Por favor ingrese un apellido válido.');
+    validado = false;
   }
 
-  if (email.value.trim() !== '' && !patronEmail.test(email.value)) {
-
-    errores.push('El e-mail no tiene un formato válido.');
+  if (!patronEmail.test(email.value.trim())) {
+    mostrarError(email, 'Por favor ingrese un email válido.');
+    validado = false;
   }
 
-  if (telefono.value.trim() !== '' && !patronTelefono.test(telefono.value)) {
+  if(isNaN(telefono.value.trim()) || telefono.value.trim() === '') {
+    mostrarError(telefono, 'El campo no puede estar vacío o contener letras.');
+    validado = false;
 
-    errores.push('El teléfono debe tener entre 7 y 15 dígitos numéricos.');
+  } else if (!patronTelefono.test(telefono.value.trim())) {
+    mostrarError(telefono, 'Por favor ingrese un teléfono válido (7 a 15 dígitos y sin guiones).');
+    validado = false;
   }
 
-  if (dni.value.trim() !== '' && !patronDNI.test(dni.value)) {
+  if(isNaN(dni.value.trim()) || dni.value.trim() === '') {
+    mostrarError(dni, 'El campo no puede estar vacío o contener letras.');
+    validado = false;
 
-    errores.push('El DNI debe tener entre 7 y 8 dígitos (solo números, sin puntos).');
+  } else if (!patronDNI.test(dni.value.trim())) {
+    mostrarError(dni, 'Por favor ingrese un DNI válido (7 u 8 dígitos y sin puntos).');
+    validado = false;
   }
 
-  if (fechaNacimiento.value !== '') {
-    const fechaNac = new Date(fechaNacimiento.value);
-    const hoy = new Date();
-    let edad = hoy.getFullYear() - fechaNac.getFullYear();
-    const diferenciaMes = hoy.getMonth() - fechaNac.getMonth();
-    if (diferenciaMes < 0 || (diferenciaMes === 0 && hoy.getDate() < fechaNac.getDate())) {
-      edad--;
-    }
-    if (isNaN(fechaNac) || edad < 12) {
-
-      errores.push('Debe ingresar una fecha de nacimiento válida (mayor de 12 años).');
-    }
+  if (cursos.value === '' || cursos.value === '...') {
+    mostrarError(cursos, 'Por favor seleccione un curso.');
+    validado = false;
   }
 
-  if (errores.length > 0) {
-    mensaje.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
-    mensaje.style.color = "#800036";
-    mensaje.innerHTML = errores.join("<br>");
-    mensajesDiv.appendChild(mensaje);
-    return;
+if (!fechaNacimiento.value) {
+  mostrarError(fechaNacimiento, 'Por favor ingrese una fecha de nacimiento.');
+  validado = false;
+
+} else {
+  const fechaNac = new Date(fechaNacimiento.value);
+  const fechaMin = new Date('1900-01-01');
+
+  const fechaMaxValidacion = new Date();
+  fechaMaxValidacion.setFullYear(hoy.getFullYear() - 12);
+
+  if (isNaN(fechaNac.getTime())) {
+    mostrarError(fechaNacimiento, 'Por favor ingrese una fecha válida.');
+    validado = false;
+
+  } else if (fechaNac < fechaMin) {
+    mostrarError(fechaNacimiento, 'La fecha no puede ser menor a 1900-01-01.');
+    validado = false;
+
+  } else if (fechaNac > fechaMaxValidacion) {
+    mostrarError(fechaNacimiento, 'Debe tener al menos 12 años.');
+    validado = false;
   }
-
-  mensaje.style.backgroundColor = "green";
-  mensaje.style.color = "white";
-  mensaje.innerHTML = `
-    <h3>🎉 Inscripción realizada con éxito</h3>
-    <p><strong>Nombre:</strong> ${nombre.value} ${apellido.value}</p>
-    <p>Recibirá un E-mail en ${email.value} con detalles de la inscripción.</p>
-  `;
-  mensajesDiv.appendChild(mensaje);
-
-  nombre.value = '';
-  apellido.value = '';
-  email.value = '';
-  telefono.value = '';
-  dni.value = '';
-  cursos.value = '...';
-  fechaNacimiento.value = '';
-  genero.value = '...';
 }
 
-btnInscribirse.addEventListener('click', validarFormulario);
+
+  if (genero.value === '' || genero.value === '...') {
+    mostrarError(genero, 'Por favor seleccione un género.');
+    validado = false;
+  }
+
+  if (validado) {
+    const contenedorMsjExito = document.createElement('div');
+    const tituloMsj = document.createElement('h2');
+    const msj = document.createElement('p');
+
+    tituloMsj.textContent = 'Inscripción realizada exitosamente.';
+    msj.textContent = `Gracias por inscribirte. Nos pondremos en contacto contigo a través de ${email.value} pronto.`;
+
+    contenedorMsjExito.appendChild(tituloMsj);
+    contenedorMsjExito.appendChild(msj);
+    contenedorMsjExito.classList.add('mensaje-exito');
+
+    formaContainer.replaceChild(contenedorMsjExito, formiInscripcion);
+    formiInscripcion.reset();
+  }
+}
+
+function mostrarError(input, mensaje) {
+
+  let errorAnterior = input.parentNode.querySelector(".error-mensaje");
+
+  if (errorAnterior) {
+    errorAnterior.textContent = mensaje;
+  } else {
+    const error = document.createElement("span");
+    error.classList.add("error-mensaje");
+    error.style.color = "red";
+    error.style.fontSize = "0.7rem";
+    error.textContent = mensaje;
+
+    input.classList.add("input-error");
+    input.parentNode.appendChild(error);
+  }
+}
+
+function limpiarErrores() {
+  const errores = document.querySelectorAll(".error-mensaje");
+  const bordesError = document.querySelectorAll(".input-error");
+
+  errores.forEach(error => error.remove());
+  bordesError.forEach(input => input.classList.remove("input-error"));
+}

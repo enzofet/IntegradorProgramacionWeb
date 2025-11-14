@@ -1,9 +1,9 @@
+
 .contenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .carrousel-container {
@@ -86,7 +86,7 @@
 
 .separador {
     margin: 2rem 0;
-    width: 68.1%;
+    width: 100%;
 }
 
 .separador-interno {
@@ -130,6 +130,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .info-cursos {
@@ -139,19 +140,24 @@
 }
 
 .curso-contenido {
-    margin-top: 0;
-    margin-left: 0;
-    width: 34rem;
+    width: 45%;
     font-family: 'Libre Baskerville','Segoe UI', sans-serif, monospace;
     font-size: 1.125rem;
 }
 
-.curso-imagen img {
-    width: 34rem;
+.curso-imagen {
+    width: 45%;
     height: 18.75rem;
     margin-top: 1.25rem; 
     object-fit: cover;
 }
+
+.curso-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .boton-curso {
     width: 100%;

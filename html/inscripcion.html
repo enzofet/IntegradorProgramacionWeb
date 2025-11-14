@@ -28,51 +28,59 @@
       </div>
     </nav>
 
-      <div class="form-container">
-        <form action="#" class="formulario">
-          <label for="nombre">Nombre/s:</label>
-            <input type="text" id="nombre" name="nombre"/>
-
-          <label for="apellido">Apellido/s:</label>
-            <input type="text" id="apellido" name="apellido"/>
-
-          <label for="email">E-mail:</label>
-            <input type="text" id="email" name="email"/>
-
-          <label for="telefono">Telefono:</label>
-            <input type="text" id="telefono" name="telefono"/>
-
-          <label for="DNI">DNI:</label>
-            <input type="text" id="DNI" name="DNI"/>
-
-          <label for="cursos">Cursos disponibles:</label>
-            <select name="cursos" id="cursos">
-                <option>...</option>
-                <option>Alemán</option>
-                <option>Inglés</option>
-                <option>Portugués</option>
-                <option>Francés</option>
-                <option>Italiano</option>
-                <option>Japonés</option>
-            </select>
-
-          <label for="fechanacimiento">Fecha de nacimiento:</label>
-            <input type="date" id="fechanacimiento" name="fechanacimiento"/>
-
-          <label for="genero">Género:</label>
-            <select name="genero" id="genero">
-                <option>...</option>
-                <option>Femenino</option>
-                <option>Masculino</option>
-                <option>Otro</option>
-            </select>
-
-          <div class="boton-inscripcion">
-            <button type="submit" class="btn-inscribirse" id="inscribirse">Inscribirse</button>
-          </div>
-        </form>
-
-        <div id="mensajes"></div>
+      <div class="form-container" id="inscripcion">
+        <div class="formulario">
+          <form action="" class="form-inscripcion" name="form-inscripcion">
+            <div class="nombre">
+              <label for="nombre">Nombre/s:</label>
+              <input type="text" id="fnombre" name="fnombre"/>
+            </div>
+            <div class="apellido">
+              <label for="apellido">Apellido/s:</label>
+              <input type="text" id="fapellido" name="fapellido"/>
+            </div>
+            <div class="email">
+              <label for="email">E-mail:</label>
+              <input type="text" id="femail" name="femail"/>
+            </div>
+            <div class="telefono">
+              <label for="telefono">Telefono:</label>
+              <input type="text" id="ftelefono" name="ftelefono"/>
+            </div>
+            <div class="DNI">
+              <label for="DNI">DNI:</label>
+              <input type="text" id="fDNI" name="fDNI"/>
+            </div>
+            <div class="cursos">
+              <label for="cursos">Cursos disponibles:</label>
+              <select name="cursos" id="fcursos">
+                  <option>...</option>
+                  <option>Alemán</option>
+                  <option>Inglés</option>
+                  <option>Portugués</option>
+                  <option>Francés</option>
+                  <option>Italiano</option>
+                  <option>Japonés</option>
+              </select>
+            </div>
+            <div class="fechanacimiento">
+              <label for="fechanacimiento">Fecha de nacimiento:</label>
+              <input type="date" id="ffechanacimiento" name="ffechanacimiento"/>
+            </div>
+            <div class="genero">
+              <label for="genero">Género:</label>
+              <select name="genero" id="fgenero">
+                  <option>...</option>
+                  <option>Femenino</option>
+                  <option>Masculino</option>
+                  <option>Otro</option>
+              </select>
+            </div>
+            <div class="boton-inscripcion">
+              <button type="submit" class="enviar-formulario">Enviar</button>
+            </div>
+          </form>
+        </div>
       </div>
 
     <!--Estas etiquetas son para todas las paginas-->

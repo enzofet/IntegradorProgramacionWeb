@@ -38,10 +38,14 @@ function validarForm(evento) {
         validado = false;
     }
 
+  const patronTelefono = /^\d{7,15}$/;  
   if (isNaN(telefono.value.trim()) || telefono.value.trim() == "") {
     mostrarError(telefono, "No puede dejar el campo vacio o ingresar letras.");
     validado = false;
-}
+  }else if (!patronTelefono.test(telefono.value.trim())) {
+    mostrarError(telefono, "Ingrese un numero de telefono valido (7 a 15 digitos).");
+    validado = false;
+  }
 
   if (typeof mensaje.value !== 'string' || mensaje.value == "") {
     mostrarError(mensaje, "Campo vacio o no valido.");
